@@ -1,0 +1,21 @@
+Algoritmo temporizador
+	//Definir variables
+	Definir valorr Como Entero;
+	//inicialiizar datos
+	Escribir "Ingrese un entero positivo:";
+	Leer valorr;
+	
+	Mientras valor < 0 Hacer
+		Escribir "Por favor, ingrese un entero positivo.";
+		Leer valorr;
+	FinMientras
+	//procesar datos
+	Mientras valor >= 0 Hacer
+		Escribir valorr;
+		Esperar 1 Segundos
+		valor <- valor - 1
+	FinMientras
+	//mostrar datos
+	Escribir "¡Tiempo cumplido!";
+
+FinAlgoritmo
