@@ -1,0 +1,46 @@
+Algoritmo tienda
+	//definir variables
+	Definir producto, respuesta Como Cadena;
+    Definir precioUnitario, subtotal, total Como Real;
+    Definir cantidad, contador Como Entero;
+    Definir resumen Como Cadena;
+	//inicializar datos
+    total <- 0;
+    contador <- 0;
+    respuesta <- "S";
+    resumen <- "";
+	
+    Escribir "Bienvenido a la tienda Wendy";
+    
+    
+    Repetir
+        Escribir "";
+        Escribir "Ingrese el nombre del producto vendido:";
+        Leer producto;
+		
+        Escribir "Ingrese la cantidad vendida (unidades):";
+        Leer cantidad;
+		
+        Escribir "Ingrese el precio unitario del producto:";
+        Leer precioUnitario;
+		
+        subtotal <- cantidad * precioUnitario;
+        total <- total + subtotal;
+        contador <- contador + 1;
+		
+        resumen <- resumen + ConvertirATexto(contador) + ". " + producto + " | Cantidad: " + ConvertirATexto(cantidad) + " | Precio Unitario: $" + ConvertirATexto(precioUnitario) + " | Subtotal: $" + ConvertirATexto(subtotal) + "//====//====//";
+		
+        Escribir "¿Desea registrar otra venta? (S/N):";
+        Leer respuesta;
+        respuesta <- Mayusculas(respuesta);
+		
+    Hasta Que respuesta = "N"
+	//mostrar datos
+	Escribir "";
+    Escribir "Resumen de ventas:";
+    Escribir "                 ";
+    Escribir resumen;
+    Escribir "Número total de productos vendidos: ", ConvertirATexto(contador);
+    Escribir "Monto total de ventas: $", ConvertirATexto(total);
+	
+FinAlgoritmo

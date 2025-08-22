@@ -1,0 +1,25 @@
+Algoritmo sin_titulo
+	Definir descripcion, fechaVencimiento, continuar, tareas_Texto Como Caracter;
+	tareas_Texto <- ""  ;
+    continuar <- "S";
+	Mientras continuar = "S" Hacer
+        Escribir "Ingrese la descripción de la tarea:";
+        Leer descripcion;
+		
+        Escribir "Ingrese la fecha de vencimiento (DD/MM/AAAA):";
+        Leer fechaVencimiento;
+		
+        tareas_Texto <- tareas_Texto + "Descripcion " + descripcion + " (Vencimiento: " + fechaVencimiento + ")" +"                ";
+		
+        Escribir "¿Desea ingresar otra tarea? (S/N):";
+        Leer continuar;
+		continuar<-Mayusculas(continuar);
+    FinMientras
+	Si tareas_Texto <> "" Entonces
+        Escribir "Listado de tareas ingresadas:";
+        Escribir tareas_Texto;
+    Sino
+        Escribir "No se ingresó ninguna tarea.";
+	FinSi
+	
+FinAlgoritmo
